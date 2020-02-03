@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>WeatherAPI</title>
+    <script src="RequestToOpenWeatherMap.js" defer type="module"></script>
+    <link rel="stylesheet" href="StyleWeather.css">
+</head>
+<body>
+<div class="main_container">
+    <div class="input_data">
+        <input type="text" placeholder="введите город" class="input_name" value="">
+        <input type="submit" value="ПОИСК" class="submit_input_name" id="start_search">
+    </div>
+    <div class="display_weather">
+        <div class="main_info">
+            <h1 class="name_town"></h1>
+            <p class="temp_town">Уточняем погоду рядом с вами...</p>
+            <p class="desc_town"></p>
+            <p class="sunrise_town"></p>
+            <p class="sunset_town"></p>
+
+        </div>
+        <div class="forecast_weather">
+
+        </div>
+    </div>
+</div>
+<div class="loader_box">
+    <p id="nameTown"></p>
+    <div class="loader"></div>
+    <input type="button" value="отмена" class="abort_fetch_button">
+</div>
+
+<div class="error_box">
+    <p class="message_error">ERROR</p>
+    <input type="button" value="закрыть" class="error_button">
+</div>
+</body>
+</html>
